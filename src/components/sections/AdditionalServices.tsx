@@ -45,11 +45,13 @@ export function AdditionalServices() {
       <div className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-center">
           <div>
-            <h2 className="break-keep [text-wrap:balance] text-[24px] font-extrabold leading-[1.25] text-ink md:text-[28px]">
-              추가 서비스
+            <h2 className="break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
+              오케이집수리의 추가서비스
             </h2>
-            <p className="mt-3 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-500">
-              배관 수리 외에도 다양한 생활 수리 서비스를 함께 제공합니다.
+            <p className="mt-3 break-keep [text-wrap:pretty] text-[15px] leading-[1.3] text-neutral-500 md:text-[16px]">
+              사소해 보이는 고장도 방치하면 큰 공사로 이어져요.
+              <br />
+              방문하신 김에 한 번에 깔끔하게 해결하세요.
             </p>
           </div>
 

@@ -15,7 +15,7 @@ export function Hero() {
           </p>
 
           <h1 className="mt-3 break-keep [text-wrap:balance] text-[32px] font-extrabold leading-[1.25] text-ink md:text-[42px]">
-            막힌 배관, 새는 수도 —
+            막힌 배관, 새는 수도
             <br />
             <span className="text-brand">오케이집수리</span>가 해결합니다
           </h1>
@@ -31,7 +31,7 @@ export function Hero() {
               <svg aria-hidden width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6.6 10.8c1.4 2.7 3.5 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8Z" />
               </svg>
-              지금 바로 전화하기
+              빠른 상담 연결
             </Button>
             <Button href="#services" variant="secondary">
               서비스 알아보기
