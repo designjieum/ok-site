@@ -19,7 +19,7 @@ const SERVICES: Service[] = [
   },
   {
     tags: ['난방 배관 세척', '누수 점검'],
-    title: '난방배관',
+    title: '난방배관 설비',
     description: '겨울철 난방이 잘 안 될 때, 막힘과 누수부터 꼼꼼히 점검해드려요.',
   },
 ]
