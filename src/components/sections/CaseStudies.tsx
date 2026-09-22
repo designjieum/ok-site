@@ -75,7 +75,8 @@ export function CaseStudies() {
     <section id="case-studies" className="border-t border-neutral-200 bg-white">
       <div className="mx-auto max-w-6xl px-5 py-16">
         <div className="text-center">
-          <h2 className="break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
+          <p className="break-keep text-[13px] font-semibold text-brand">CASE STUDY</p>
+          <h2 className="mt-3 break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
             시공 사례
           </h2>
           <p className="mt-3 break-keep [text-wrap:pretty] text-[15px] leading-[1.3] text-neutral-500 md:text-[16px]">

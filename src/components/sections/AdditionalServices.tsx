@@ -45,8 +45,11 @@ export function AdditionalServices() {
       <div className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-center">
           <div>
-            <h2 className="break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
-              오케이집수리의 추가서비스
+            <p className="break-keep text-[13px] font-semibold text-brand">EXTRA SERVICE</p>
+            <h2 className="mt-3 break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
+              오케이집수리의
+              <br />
+              추가서비스
             </h2>
             <p className="mt-3 break-keep [text-wrap:pretty] text-[15px] leading-[1.3] text-neutral-500 md:text-[16px]">
               사소해 보이는 고장도 방치하면 큰 공사로 이어져요.

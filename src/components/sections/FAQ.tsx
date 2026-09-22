@@ -19,7 +19,8 @@ export function FAQ() {
   return (
     <section className="border-t border-neutral-200 bg-neutral-50">
       <div className="mx-auto max-w-6xl px-5 py-16">
-        <h2 className="break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
+        <p className="break-keep text-[13px] font-semibold text-brand">FAQ</p>
+        <h2 className="mt-3 break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
           자주 묻는 질문
         </h2>
         <div className="mt-6">

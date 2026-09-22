@@ -8,19 +8,19 @@ type Service = {
 
 const SERVICES: Service[] = [
   {
-    tags: ['수전 교체', '배관 정비'],
-    title: '주방·욕실 수전 교체',
-    description: '새는 수전, 헐렁한 샤워기, 막힌 배관까지 — 방문 당일 바로 교체해 드려요.',
+    tags: ['누수 탐지', '정밀 진단', '상하수도 배관'],
+    title: '배관 누수 탐지 및 수리',
+    description: '벽 뜯지 않고 정밀 장비로 누수 위치부터 콕 짚어드려요.',
   },
   {
-    tags: ['온수기 복원', '전문 설치'],
-    title: '온수기·분배기·펌프 설비',
+    tags: ['온수기 설치', '수도계량기 점검'],
+    title: '온수기·분배기·수도계량기 설비',
     description: '온수 안 나오는 그날, 바로 출동해서 원인부터 찾아드립니다.',
   },
   {
-    tags: ['누수 탐지', '정밀 진단'],
-    title: '배관 누수 탐지 및 수리',
-    description: '벽 뜯지 않고 정밀 장비로 누수 위치부터 콕 짚어드려요.',
+    tags: ['난방 배관 세척', '누수 점검'],
+    title: '난방배관',
+    description: '겨울철 난방이 잘 안 될 때, 막힘과 누수부터 꼼꼼히 점검해드려요.',
   },
 ]
 
@@ -31,23 +31,14 @@ function ServiceCard({ service }: { service: Service }) {
         작업 사진 (교체 예정)
       </div>
       <div className="mt-5">
-        <div className="mb-3 flex flex-wrap gap-2">
-          {service.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-brand/10 px-3 py-1 text-[12px] font-semibold text-brand-dark"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <p className="mb-2 text-[13px] font-medium text-neutral-400">{service.tags.join(' · ')}</p>
         <h3 className="break-keep [text-wrap:balance] text-[20px] font-bold leading-[1.25] text-ink">
           {service.title}
         </h3>
         <p className="mt-2 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-500">
           {service.description}
         </p>
-        <Button href="#contact" variant="dark" className="mt-5 !px-5 !py-2.5 text-[13px]">
+        <Button href="#contact" variant="primary" className="mt-5 !px-5 !py-2.5 text-[13px]">
           지금 바로 빠른 상담 연결
         </Button>
       </div>
@@ -60,7 +51,8 @@ export function Services() {
     <section id="services" className="mx-auto max-w-6xl px-5 py-16">
       <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-start">
         <div className="md:sticky md:top-24 md:pt-10">
-          <h2 className="break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
+          <p className="break-keep text-[13px] font-semibold text-brand">SERVICE</p>
+          <h2 className="mt-3 break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
             우리 집을 위한
             <br />
             믿음직한 서비스

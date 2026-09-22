@@ -42,7 +42,8 @@ export function Reviews() {
     <section id="reviews" className="border-t border-neutral-200 bg-white">
       <div className="mx-auto max-w-6xl py-16">
         <div className="px-5">
-          <h2 className="break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
+          <p className="break-keep text-[13px] font-semibold text-brand">REVIEW</p>
+          <h2 className="mt-3 break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
             고객 후기
           </h2>
           <p className="mt-3 break-keep [text-wrap:pretty] text-[15px] leading-[1.3] text-neutral-500 md:text-[16px]">
