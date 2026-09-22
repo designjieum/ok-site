@@ -57,7 +57,7 @@ export function AdditionalServices() {
               <div>
                 <p className="break-keep text-[18px] font-bold leading-[1.25] text-white">수전 교체</p>
                 <p className="mt-1 break-keep [text-wrap:pretty] text-[13px] leading-[1.3] text-white/70">
-                  주방, 화장실
+                  주방·화장실 수전, 방문 즉시 교체
                 </p>
               </div>
             </div>
