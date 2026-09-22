@@ -43,7 +43,7 @@ export function AdditionalServices() {
   return (
     <section className="border-t border-neutral-200 bg-neutral-50">
       <div className="mx-auto max-w-6xl px-5 py-16">
-        <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-center">
+        <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-start">
           <div>
             <p className="break-keep text-[13px] font-semibold text-brand">EXTRA SERVICE</p>
             <h2 className="mt-3 break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">

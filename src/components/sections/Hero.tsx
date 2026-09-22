@@ -10,15 +10,17 @@ const SLIDES = [
   '현장 작업 사진 3 (교체 예정)',
 ]
 
+const SLIDE_DURATION = 4000
+
 function HeroSlider() {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    const id = setInterval(() => {
+    const id = setTimeout(() => {
       setIndex((prev) => (prev + 1) % SLIDES.length)
-    }, 4000)
-    return () => clearInterval(id)
-  }, [])
+    }, SLIDE_DURATION)
+    return () => clearTimeout(id)
+  }, [index])
 
   return (
     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl sm:aspect-[4/3]">
@@ -34,18 +36,27 @@ function HeroSlider() {
         </div>
       ))}
 
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">
+      <div className="absolute inset-x-4 bottom-4 flex gap-1.5">
         {SLIDES.map((_, i) => (
           <button
             key={i}
             type="button"
             onClick={() => setIndex(i)}
             aria-label={`슬라이드 ${i + 1}로 이동`}
-            className={cn(
-              'h-1.5 rounded-full transition-all',
-              i === index ? 'w-5 bg-brand' : 'w-1.5 bg-white/70',
+            className="h-1 flex-1 overflow-hidden rounded-full bg-white/35 backdrop-blur"
+          >
+            {i === index ? (
+              <span
+                key={index}
+                className="block h-full rounded-full bg-white"
+                style={{ animation: `fill-bar ${SLIDE_DURATION}ms linear forwards` }}
+              />
+            ) : (
+              <span
+                className={cn('block h-full rounded-full bg-white', i < index ? 'w-full' : 'w-0')}
+              />
             )}
-          />
+          </button>
         ))}
       </div>
     </div>
