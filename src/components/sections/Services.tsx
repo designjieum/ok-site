@@ -98,7 +98,7 @@ export function Services() {
 
   return (
     <section id="services" className="mx-auto max-w-6xl px-5 py-16">
-      <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-start">
+      <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr]">
         <div ref={outerRef} className="md:relative">
           <div
             className={cn('md:pt-10', frozen ? 'md:absolute md:inset-x-0' : 'md:sticky md:top-24')}
