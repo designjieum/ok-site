@@ -60,8 +60,8 @@ export function Reviews() {
               key={review.author}
               className="w-[85%] shrink-0 snap-start rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm sm:w-[45%] md:w-[32%]"
             >
-              <svg aria-hidden width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-neutral-200">
-                <path d="M7.5 6C4.5 6 2 8.5 2 11.5c0 2.6 1.9 4.7 4.3 5-.3 1.4-1.1 2.5-2.3 3.3v1.7c3-.8 5-3.3 5-6.9V11c0-2.8-1.6-5-3-5Zm10 0c-3 0-5.5 2.5-5.5 5.5 0 2.6 1.9 4.7 4.3 5-.3 1.4-1.1 2.5-2.3 3.3v1.7c3-.8 5-3.3 5-6.9V11c0-2.8-1.6-5-3-5Z" />
+              <svg aria-hidden width="34" height="34" viewBox="0 0 32 32" fill="currentColor" className="text-brand/20">
+                <path d="M9.5 20c-1.9 0-3.5-.6-4.7-1.9C3.6 16.9 3 15.3 3 13.4c0-2.4.8-4.6 2.4-6.5C7 5 9 3.5 11.5 2.5l1 2.1c-1.6.8-2.9 1.8-3.8 3-1 1.2-1.5 2.4-1.6 3.6.4-.1.8-.2 1.2-.2 1.6 0 2.9.5 3.9 1.6 1 1.1 1.5 2.4 1.5 4 0 1.6-.5 2.9-1.6 3.9-1 1-2.3 1.5-3.6 1.5Zm13 0c-1.9 0-3.5-.6-4.7-1.9-1.2-1.2-1.8-2.8-1.8-4.7 0-2.4.8-4.6 2.4-6.5 1.6-1.9 3.6-3.4 6.1-4.4l1 2.1c-1.6.8-2.9 1.8-3.8 3-1 1.2-1.5 2.4-1.6 3.6.4-.1.8-.2 1.2-.2 1.6 0 2.9.5 3.9 1.6 1 1.1 1.5 2.4 1.5 4 0 1.6-.5 2.9-1.6 3.9-1 1-2.3 1.5-3.6 1.5Z" />
               </svg>
               <p className="mt-3 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-700">
                 {review.quote}
