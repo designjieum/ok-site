@@ -1,7 +1,6 @@
 import { Header } from './components/sections/Header'
 import { Hero } from './components/sections/Hero'
 import { Stats } from './components/sections/Stats'
-import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
 import { AdditionalServices } from './components/sections/AdditionalServices'
 import { CaseStudies } from './components/sections/CaseStudies'
@@ -18,7 +17,6 @@ function App() {
       <main>
         <Hero />
         <Stats />
-        <About />
         <Services />
         <AdditionalServices />
         <CaseStudies />

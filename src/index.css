@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #0f766e;
-  --color-brand-dark: #0c5c56;
-  --color-ink: #171717;
-  --color-paper: #faf9f7;
+  --color-brand: #2563eb;
+  --color-brand-light: #60a5fa;
+  --color-brand-dark: #1d4ed8;
+  --color-ink: #101828;
+  --color-paper: #f7f9fc;
 }
 
 @layer base {

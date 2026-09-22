@@ -58,21 +58,23 @@ function ServiceCard({ service }: { service: Service }) {
 export function Services() {
   return (
     <section id="services" className="mx-auto max-w-6xl px-5 py-16">
-      <div className="mb-4 grid gap-2 md:grid-cols-2">
-        <h2 className="break-keep [text-wrap:balance] text-[24px] font-extrabold leading-[1.25] text-ink md:text-[28px]">
-          우리 집을 위한
-          <br />
-          믿음직한 서비스
-        </h2>
-        <p className="break-keep [text-wrap:pretty] self-end text-right text-[14px] leading-[1.3] text-neutral-500">
-          단순한 수리가 아니라, 일상을 지키는 파트너가 되기 위해 언제나 최선을 다해요.
-        </p>
-      </div>
+      <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-start">
+        <div className="md:sticky md:top-24">
+          <h2 className="break-keep [text-wrap:balance] text-[24px] font-extrabold leading-[1.25] text-ink md:text-[28px]">
+            우리 집을 위한
+            <br />
+            믿음직한 서비스
+          </h2>
+          <p className="mt-3 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-500">
+            단순한 수리가 아니라, 일상을 지키는 파트너가 되기 위해 언제나 최선을 다해요.
+          </p>
+        </div>
 
-      <div className="mt-4">
-        {SERVICES.map((service) => (
-          <ServiceCard key={service.title} service={service} />
-        ))}
+        <div>
+          {SERVICES.map((service) => (
+            <ServiceCard key={service.title} service={service} />
+          ))}
+        </div>
       </div>
     </section>
   )
