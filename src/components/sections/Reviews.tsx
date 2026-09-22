@@ -9,13 +9,13 @@ type Review = {
 const REVIEWS: Review[] = [
   {
     author: '루미xx님',
-    platform: '당근후기',
+    platform: '당근',
     quote:
       '배관 누수 문제로 문의드렸는데 정말 빠르고 꼼꼼하게 수리해 주셨습니다. 작업 전에 누수 원인과 수리 방향을 친절하게 설명해 주셔서 안심이 되었고, 시공도 군더더기 없이 완벽하게 마무리해 주셨어요. 만족도 200%입니다!! 고민하시는 분들께 강력 추천합니다!!!',
   },
   {
     author: '다둥xx님',
-    platform: '당근후기',
+    platform: '당근',
     quote:
       '현관 전등이 너무 빨리 나가서 불편해 LED전등으로 교체하고 말발굽도 달아야 해서 연락드렸는데, 전화통화도 너무 친절하게 해주시고 변기도 자꾸 소리가 났었는데 그것도 잡아주셔서 저희 집 불편함이 한번에 해결됐습니당!! 후기 귀찮아서 잘 작성 안 하는데 너무 세심하게 잘해주셔서 감사함에 후기 남겨봅니다 추천드려용:)',
   },
@@ -85,17 +85,17 @@ const REVIEWS: Review[] = [
   },
   {
     author: '딩다xx님',
-    platform: '당근후기',
+    platform: '당근',
     quote: '친절하고 가격이 합리적이에요.',
   },
   {
     author: '엠디엠xx님',
-    platform: '당근후기',
+    platform: '당근',
     quote: '빠르게 도와주셔서 해체 잘했습니다!',
   },
   {
     author: '사x님',
-    platform: '당근후기',
+    platform: '당근',
     quote: '수도배관 너무 친절히 잘해주셨습니다. 감사합니다',
   },
 ]
@@ -192,7 +192,7 @@ export function Reviews() {
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
-          className="mt-8 flex cursor-grab snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 active:cursor-grabbing [&::-webkit-scrollbar]:hidden"
+          className="mt-8 flex cursor-grab snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 scroll-px-5 active:cursor-grabbing [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: 'none' }}
         >
           {REVIEWS.map((review, i) => (
