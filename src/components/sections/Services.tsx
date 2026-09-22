@@ -49,7 +49,7 @@ function ServiceCard({ service }: { service: Service }) {
 export function Services() {
   return (
     <section id="services" className="mx-auto max-w-6xl px-5 py-16">
-      <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr]">
+      <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-start">
         <div className="md:sticky md:top-24 md:pt-10">
           <p className="break-keep text-[13px] font-semibold text-brand">SERVICE</p>
           <h2 className="mt-3 break-keep [text-wrap:balance] text-[28px] font-extrabold leading-[1.25] text-ink md:text-[32px]">
