@@ -22,6 +22,13 @@ export function Footer() {
             <p className="mt-3 break-keep [text-wrap:pretty] text-[13px] leading-[1.3] text-white/50">
               수도 배관 · 설비 · 누수탐지 · 도어락 · LED등 · 기타 생활 수리
             </p>
+            <a
+              href="#"
+              aria-label="네이버 블로그"
+              className="mt-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#03C75A] text-[13px] font-bold text-white transition-opacity hover:opacity-85"
+            >
+              N
+            </a>
           </div>
 
           <div>

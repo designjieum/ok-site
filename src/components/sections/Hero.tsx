@@ -2,54 +2,6 @@ import { Button } from '../ui/Button'
 
 const TEL_HREF = 'tel:05071334257'
 
-const MINI_FEATURES = [
-  {
-    title: '당일출장',
-    desc: '빠른 방문, 신속한 처리',
-    icon: (
-      <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" strokeLinecap="round" strokeLinejoin="round" />
-    ),
-  },
-  {
-    title: '고객만족도 4.9/5',
-    desc: '실제 후기 기반',
-    icon: (
-      <path
-        d="M12 2.5 15 9l7 1-5.2 4.9L18 22l-6-3.4L6 22l1.2-7.1L2 10l7-1Z"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    ),
-  },
-  {
-    title: '1년 무상 A/S',
-    desc: '사후관리까지 확실하게',
-    icon: (
-      <path
-        d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    ),
-  },
-]
-
-function MiniFeature({ feature }: { feature: (typeof MINI_FEATURES)[number] }) {
-  return (
-    <div className="flex items-start gap-2.5">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
-        <svg aria-hidden width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          {feature.icon}
-        </svg>
-      </span>
-      <div>
-        <p className="text-[13px] font-semibold text-ink">{feature.title}</p>
-        <p className="text-[12px] text-neutral-500">{feature.desc}</p>
-      </div>
-    </div>
-  )
-}
-
 export function Hero() {
   return (
     <section
@@ -85,12 +37,6 @@ export function Hero() {
               서비스 알아보기
             </Button>
           </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-4 border-t border-neutral-200 pt-6 sm:grid-cols-3">
-            {MINI_FEATURES.map((feature) => (
-              <MiniFeature key={feature.title} feature={feature} />
-            ))}
-          </div>
         </div>
 
         <div className="relative">
@@ -98,30 +44,6 @@ export function Hero() {
 
           <div className="relative flex aspect-[4/5] w-full items-center justify-center rounded-3xl bg-gradient-to-br from-brand/15 to-neutral-100 text-[13px] font-medium text-neutral-400 sm:aspect-[4/3]">
             현장 작업 사진 (교체 예정)
-          </div>
-
-          <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-2xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-brand">
-              <svg aria-hidden width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
-              </svg>
-            </span>
-            <div>
-              <p className="text-[12px] font-bold text-ink">당일출장 가능</p>
-              <p className="text-[11px] text-neutral-500">평균 30분 이내 도착</p>
-            </div>
-          </div>
-
-          <div className="absolute right-4 top-4 flex items-center gap-2 rounded-2xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-100 text-amber-500">
-              <svg aria-hidden width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.5 15 9l7 1-5.2 4.9L18 22l-6-3.4L6 22l1.2-7.1L2 10l7-1Z" />
-              </svg>
-            </span>
-            <div>
-              <p className="text-[12px] font-bold text-ink">고객평점 4.9/5</p>
-              <p className="text-[11px] text-neutral-500">실제 후기 2,341건</p>
-            </div>
           </div>
         </div>
       </div>

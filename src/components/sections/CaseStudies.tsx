@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-import { motion } from 'motion/react'
 
 type CaseItem = {
   tag: string
@@ -51,10 +50,9 @@ function CaseColumn({
 }) {
   return (
     <div className={className}>
-      <motion.div
-        animate={{ translateY: '-50%' }}
-        transition={{ duration, repeat: Infinity, ease: 'linear', repeatType: 'loop' }}
-        className="flex flex-col gap-4"
+      <div
+        className="flex flex-col gap-4 [animation-name:scroll-up] [animation-timing-function:linear] [animation-iteration-count:infinite] hover:[animation-play-state:paused]"
+        style={{ animationDuration: `${duration}s` }}
       >
         {[0, 1].map((dup) => (
           <Fragment key={dup}>
@@ -63,7 +61,7 @@ function CaseColumn({
             ))}
           </Fragment>
         ))}
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -76,12 +74,14 @@ export function CaseStudies() {
   return (
     <section id="case-studies" className="border-t border-neutral-200 bg-white">
       <div className="mx-auto max-w-6xl px-5 py-16">
-        <h2 className="break-keep [text-wrap:balance] text-[24px] font-extrabold leading-[1.25] text-ink md:text-[28px]">
-          시공 사례
-        </h2>
-        <p className="mt-3 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-500">
-          오케이집수리가 다녀간 현장을 확인해 보세요.
-        </p>
+        <div className="text-center">
+          <h2 className="break-keep [text-wrap:balance] text-[24px] font-extrabold leading-[1.25] text-ink md:text-[28px]">
+            시공 사례
+          </h2>
+          <p className="mt-3 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-500">
+            오케이집수리가 다녀간 현장을 확인해 보세요.
+          </p>
+        </div>
 
         <div className="mt-8 flex max-h-[640px] justify-center gap-4 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
           <CaseColumn items={FIRST_COLUMN} duration={16} className="w-full max-w-[280px]" />

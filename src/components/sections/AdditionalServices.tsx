@@ -1,5 +1,3 @@
-import { Button } from '../ui/Button'
-
 function SinkIcon() {
   return (
     <svg aria-hidden width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -47,20 +45,12 @@ export function AdditionalServices() {
       <div className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.4fr] md:items-center">
           <div>
-            <span className="inline-flex items-center gap-1 rounded-full border border-neutral-300 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
-              ‹ Our Service
-            </span>
-            <h2 className="mt-4 break-keep [text-wrap:balance] text-[24px] font-extrabold leading-[1.25] text-ink md:text-[28px]">
-              오케이집수리의
-              <br />
-              주요 서비스
+            <h2 className="break-keep [text-wrap:balance] text-[24px] font-extrabold leading-[1.25] text-ink md:text-[28px]">
+              추가 서비스
             </h2>
             <p className="mt-3 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-500">
-              배관부터 설비까지, 집안의 모든 문제 한 번에 해결해드립니다.
+              배관 수리 외에도 다양한 생활 수리 서비스를 함께 제공합니다.
             </p>
-            <Button href="#services" variant="secondary" className="mt-6">
-              전체 서비스 보기 →
-            </Button>
           </div>
 
           <div className="grid grid-cols-6 gap-4">

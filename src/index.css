@@ -8,6 +8,17 @@
   --color-paper: #f7f9fc;
 }
 
+@layer utilities {
+  @keyframes scroll-up {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

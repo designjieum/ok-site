@@ -26,11 +26,11 @@ const SERVICES: Service[] = [
 
 function ServiceCard({ service }: { service: Service }) {
   return (
-    <div className="grid gap-5 border-b border-neutral-200 py-10 last:border-0 md:grid-cols-[1fr_1.1fr] md:items-center">
-      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-neutral-100 text-[13px] font-medium text-neutral-400">
+    <div className="border-b border-neutral-200 py-10 last:border-0">
+      <div className="flex aspect-video items-center justify-center rounded-2xl bg-neutral-100 text-[13px] font-medium text-neutral-400">
         작업 사진 (교체 예정)
       </div>
-      <div>
+      <div className="mt-5">
         <div className="mb-3 flex flex-wrap gap-2">
           {service.tags.map((tag) => (
             <span
