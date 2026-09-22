@@ -4,7 +4,7 @@ import { Stats } from './components/sections/Stats'
 import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
 import { AdditionalServices } from './components/sections/AdditionalServices'
-import { Pricing } from './components/sections/Pricing'
+import { CaseStudies } from './components/sections/CaseStudies'
 import { Reviews } from './components/sections/Reviews'
 import { FAQ } from './components/sections/FAQ'
 import { CTA } from './components/sections/CTA'
@@ -21,7 +21,7 @@ function App() {
         <About />
         <Services />
         <AdditionalServices />
-        <Pricing />
+        <CaseStudies />
         <Reviews />
         <FAQ />
         <CTA />

@@ -26,14 +26,14 @@ export function Hero() {
           <br />
           오케이집수리
         </h1>
-        <p className="break-keep [text-wrap:pretty] text-[15px] leading-[1.3] text-neutral-500 md:text-[16px]">
-          싱크대부터 양변기, 온수기까지 — 정직한 가격과 빠른 출동으로 도와드려요.
+        <p className="break-keep [text-wrap:pretty] text-right text-[15px] leading-[1.3] text-neutral-500 md:text-[16px]">
+          싱크대부터 양변기, 온수기까지 정직한 가격과 빠른 출동으로 도와드려요.
         </p>
       </div>
 
       <div className="mt-6 flex flex-wrap gap-3">
         <Button href={TEL_HREF} variant="primary">
-          출장 문의하기 →
+          출장 문의하기
         </Button>
         <Button href="#services" variant="secondary">
           서비스 둘러보기

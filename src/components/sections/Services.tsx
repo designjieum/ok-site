@@ -4,7 +4,6 @@ type Service = {
   tags: string[]
   title: string
   description: string
-  priceHint: string
 }
 
 const SERVICES: Service[] = [
@@ -12,19 +11,16 @@ const SERVICES: Service[] = [
     tags: ['수전 교체', '배관 정비'],
     title: '주방·욕실 수전 교체',
     description: '새는 수전, 헐렁한 샤워기, 막힌 배관까지 — 방문 당일 바로 교체해 드려요.',
-    priceHint: '3만원대부터',
   },
   {
     tags: ['온수기 복원', '전문 설치'],
     title: '온수기·분배기·펌프 설비',
     description: '온수 안 나오는 그날, 바로 출동해서 원인부터 찾아드립니다.',
-    priceHint: '방문점검 후 안내',
   },
   {
     tags: ['누수 탐지', '정밀 진단'],
     title: '배관 누수 탐지 및 수리',
     description: '벽 뜯지 않고 정밀 장비로 누수 위치부터 콕 짚어드려요.',
-    priceHint: '방문점검 후 안내',
   },
 ]
 
@@ -51,9 +47,8 @@ function ServiceCard({ service }: { service: Service }) {
         <p className="mt-2 break-keep [text-wrap:pretty] text-[14px] leading-[1.3] text-neutral-500">
           {service.description}
         </p>
-        <p className="mt-3 text-[13px] font-semibold text-brand-dark">{service.priceHint}</p>
-        <Button href="#contact" variant="secondary" className="mt-4 !px-5 !py-2.5 text-[13px]">
-          무료 견적 받기 →
+        <Button href="#contact" variant="secondary" className="mt-5 !px-5 !py-2.5 text-[13px]">
+          지금 바로 빠른 상담 연결
         </Button>
       </div>
     </div>
@@ -69,7 +64,7 @@ export function Services() {
           <br />
           믿음직한 서비스
         </h2>
-        <p className="break-keep [text-wrap:pretty] self-end text-[14px] leading-[1.3] text-neutral-500">
+        <p className="break-keep [text-wrap:pretty] self-end text-right text-[14px] leading-[1.3] text-neutral-500">
           단순한 수리가 아니라, 일상을 지키는 파트너가 되기 위해 언제나 최선을 다해요.
         </p>
       </div>

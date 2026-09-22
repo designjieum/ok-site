@@ -36,7 +36,7 @@ export function Header() {
           href={TEL_HREF}
           className="hidden items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 text-[13px] font-semibold text-white md:inline-flex"
         >
-          긴급출동 문의
+          출장 문의하기
         </a>
       </div>
     </header>
