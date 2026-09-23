@@ -4,10 +4,12 @@ import { cn } from '../../lib/utils'
 
 const TEL_HREF = 'tel:05071334257'
 
+const SERVICE_AREAS = ['양주', '포천', '의정부', '동두천']
+
 const SLIDES = [
-  '현장 작업 사진 1 (교체 예정)',
-  '현장 작업 사진 2 (교체 예정)',
-  '현장 작업 사진 3 (교체 예정)',
+  { src: '/images/hero-1.webp', alt: '싱크대 배관 수리 현장' },
+  { src: '/images/hero-2.webp', alt: '배관 교체 작업 현장' },
+  { src: '/images/hero-3.webp', alt: '누수 탐지 작업 현장' },
 ]
 
 const SLIDE_DURATION = 4000
@@ -24,16 +26,18 @@ function HeroSlider() {
 
   return (
     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl sm:aspect-[4/3]">
-      {SLIDES.map((label, i) => (
-        <div
-          key={label}
+      {SLIDES.map((slide, i) => (
+        <img
+          key={slide.src}
+          src={slide.src}
+          alt={slide.alt}
+          loading={i === 0 ? 'eager' : 'lazy'}
+          fetchPriority={i === 0 ? 'high' : 'auto'}
           className={cn(
-            'absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand/15 to-neutral-100 text-[13px] font-medium text-neutral-400 transition-opacity duration-700',
+            'absolute inset-0 h-full w-full object-cover transition-opacity duration-700',
             i === index ? 'opacity-100' : 'opacity-0',
           )}
-        >
-          {label}
-        </div>
+        />
       ))}
 
       <div className="absolute inset-x-4 bottom-4 flex gap-1.5">
@@ -76,13 +80,13 @@ export function Hero() {
           </p>
 
           <h1 className="mt-3 break-keep [text-wrap:balance] text-[32px] font-extrabold leading-[1.25] text-ink md:text-[42px]">
-            막힌 배관, 새는 수도
+            새는 수도, 차가운 난방
             <br />
             <span className="text-brand">오케이집수리</span>가 해결합니다.
           </h1>
 
           <p className="mt-4 break-keep [text-wrap:pretty] text-[15px] leading-[1.3] text-neutral-500 md:text-[16px]">
-            갑작스러운 누수, 막힌 배관, 고장난 설비까지
+            갑작스러운 누수, 낡은 난방 배관, 고장난 설비까지
             <br />
             전문가가 직접 방문하여 빠르고 정확하게 해결해드립니다.
           </p>
@@ -98,6 +102,13 @@ export function Hero() {
               서비스 알아보기
             </Button>
           </div>
+
+          <p className="mt-6 flex items-center gap-1.5 break-keep text-[13px] font-medium text-neutral-500">
+            <svg aria-hidden width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="shrink-0 text-brand">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
+            </svg>
+            {SERVICE_AREAS.join(' · ')} 출장 수리
+          </p>
         </div>
 
         <div className="relative">

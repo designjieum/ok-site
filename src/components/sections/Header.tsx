@@ -13,11 +13,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5">
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand to-brand-light text-white">
-            <svg aria-hidden width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2c-4 5.2-7 9.3-7 12.8A7 7 0 0 0 19 14.8C19 11.3 16 7.2 12 2Z" />
-            </svg>
-          </span>
+          <img src="/favicon.svg" alt="" width={40} height={40} className="h-10 w-10" />
           <span className="leading-tight">
             <span className="block text-[16px] font-bold text-ink">오케이집수리</span>
             <span className="block text-[11px] text-neutral-400">수도 · 배관 · 설비 전문</span>

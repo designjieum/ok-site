@@ -1,29 +1,56 @@
 import { Fragment } from 'react'
 
 type CaseItem = {
+  image: string
   tag: string
   title: string
   result: string
 }
 
 const CASES: CaseItem[] = [
-  { tag: '누수 탐지', title: '옥정동 다세대주택 화장실 누수', result: '벽 뜯지 않고 원인부터 찾아 하루 만에 해결했어요.' },
-  { tag: '수전 교체', title: '회정동 아파트 주방 수전', result: '10년 된 낡은 수전을 새 제품으로 깔끔하게 교체했어요.' },
-  { tag: '온수기 설치', title: '고읍동 상가 온수기 긴급 설치', result: '온수기 고장으로 급했던 매장, 당일 방문해 바로 설치했어요.' },
-  { tag: '누수 탐지', title: '옥정동 주택 숨은 누수', result: '곰팡이 원인이었던 숨은 누수를 정밀 장비로 찾아냈어요.' },
-  { tag: '배관 막힘 해결', title: '덕정동 빌라 배관 막힘', result: '꽉 막혔던 하수구, 특수 장비로 말끔히 뚫었어요.' },
-  { tag: '욕실 전체 교체', title: '옥정동 신축 아파트 욕실', result: '낡은 욕실을 위생적이고 산뜻한 공간으로 바꿔드렸어요.' },
-  { tag: '샤워기 교체', title: '고암동 원룸 샤워기 교체', result: '수압 약했던 샤워기, 넉넉한 수압의 새 제품으로 교체했어요.' },
-  { tag: '세면기 교체', title: '은현면 주택 세면기 교체', result: '금이 가 있던 세면기를 안전한 새 제품으로 바꿔드렸어요.' },
-  { tag: '정기 점검', title: '옥정동 카페 설비 점검', result: '정기 점검으로 큰 고장 나기 전에 미리 손봐드렸어요.' },
+  { image: '/images/case-1.webp', tag: '몰탈 미장 마감', title: '양주·의정부·포천·동두천', result: '새 난방배관 신설과 매끄러운 몰탈 미장 마감' },
+  { image: '/images/case-2.webp', tag: '난방 배관', title: '양주·의정부·포천·동두천', result: '기존 낡은 XL 파이프, 부식된 와이어메쉬를 전부 걷어내고 새 난방 배관 신설' },
+  { image: '/images/case-3.webp', tag: '수전 위치 변경', title: '양주·의정부·포천·동두천', result: '샤워 수전 높이를 서서 쓰기 편하게 위로 올리는 위치 변경 공사' },
+  { image: '/images/case-4.webp', tag: '분배기 교체', title: '양주·의정부·포천·동두천', result: '누수 위험이 높은 노후 분배기 새 제품으로 교체' },
+  { image: '/images/case-5.webp', tag: '상수도관 연장', title: '양주·의정부·포천·동두천', result: '수도계량기에서부터 집 안 메인 급수 포인트까지 상수도관 연장' },
+  { image: '/images/case-6.webp', tag: '수전 교체', title: '포천 호병골', result: '낡은 세면기 수전을 반짝반짝한 새 제품으로 교체' },
+  { image: '/images/case-7.webp', tag: '난방 배관', title: '양주시 단독주택', result: '방, 거실, 세탁실까지 포함된 30평 규모 난방 배관 신설' },
+  { image: '/images/case-8.webp', tag: '하수관·수도관', title: '노후 주택 리모델링', result: '오수, 하수 배관 신설 및 온·냉수 수도배관 구축까지 완벽하게 시공' },
+  { image: '/images/case-9.webp', tag: '양변기·소변기', title: '포천시 가산면', result: '양변기 2개, 세면기 2개, 소변기 1개 설치' },
+  { image: '/images/case-10.webp', tag: '수도 배관', title: '신축 건물 배관 증설', result: '주방 싱크대, 세탁실, 화장실 세면대와 양변기 자리까지 신설' },
+  { image: '/images/case-11.webp', tag: '누수탐지', title: '양주·의정부·포천·동두천', result: '보일러실 옆, 세탁기에 연결된 수전 밑 바닥에서 누수' },
+  { image: '/images/case-12.webp', tag: '누수탐지', title: '대학생 기숙사', result: '아래층 전등 위로 물이 떨어지는 누수 탐지 및 수리' },
+  { image: '/images/case-13.webp', tag: '디에트르 빨래장 철거', title: '파주 운정 디에트르 아파트', result: '세탁실 손빨래장 철거' },
+  { image: '/images/case-14.webp', tag: '디에트르 빨래장 철거', title: '양주 옥정 디에트르 아파트', result: '세탁실 손빨래장 철거' },
+  { image: '/images/case-15.webp', tag: '수전 교체', title: '수전 누수 해결', result: '절수 페달 연동형 수전으로 교체' },
+  { image: '/images/case-16.webp', tag: '디에트르 빨래장 철거', title: '인천 송도 디에트르 아파트', result: '세탁실 손빨래장 철거' },
+  { image: '/images/case-17.webp', tag: '세면대 설치', title: '구형 아파트', result: '반달형 세면기로 교체' },
+  { image: '/images/case-18.webp', tag: '샤워 수전 교체', title: '포천 주공', result: '샤워기 물을 잠가도 새는 오래된 수전 교체' },
+  { image: '/images/case-19.webp', tag: '수전 교체', title: '양주시 삼숭동', result: '밤새 한방울 씩 떨어지는 오래된 수전 교체' },
+  { image: '/images/case-20.webp', tag: '누수탐지', title: '누수 지점 찾기', result: '1층 주차장 천장으로 물이 새는 지점 탐지 및 수리' },
+  { image: '/images/case-21.webp', tag: '누수탐지', title: '빌라 3층', result: '거실 천장 위로 물이 떨어져 4층 세대 누수 탐지 및 수리' },
+  { image: '/images/case-22.webp', tag: '디에트르 빨래장 철거', title: '양주시 옥정동', result: '디에트르 아파트 단톡방에 유명해진 빨래장 철거' },
+  { image: '/images/case-23.webp', tag: '양변기 교체', title: '양주시 은현면', result: '겨울철 동파된 양변기 교체' },
+  { image: '/images/case-24.webp', tag: '방화문 교체', title: '양주시 구옥', result: '할머니가 사용하기 힘든 뻑뻑한 문을 새 문으로 교체' },
+  { image: '/images/case-25.webp', tag: '난방 배관', title: '베란다 확장', result: '베란다 공간 확장에 따른 난방 배관 연결' },
+  { image: '/images/case-26.webp', tag: '부동전 교체', title: '겨울철 동파', result: '동파 문제로 고생하셨던 고객님 댁 부동전 교체' },
+  { image: '/images/case-27.webp', tag: '온수기 설치', title: '양주·의정부·포천·동두천', result: '온수 공급이 되지 않았던 고객님댁 온수기 설치' },
+  { image: '/images/case-28.webp', tag: '수도계량기·온수기', title: '양주·의정부·포천·동두천', result: '새롭게 수도 계량기를 설치하고 온수기까지 연결' },
+  { image: '/images/case-29.webp', tag: '싱크대 설치', title: '양주·의정부·포천·동두천', result: '기존 싱크대 철거 후, 새 싱크대 설치 및 수도, 하수배관 연결' },
+  { image: '/images/case-30.webp', tag: '난방 배관', title: '양주·의정부·포천·동두천', result: '기존 배관보다 설치가 간편하고 유지 관리가 용이한 XL 배관 설치' },
 ]
 
 function CaseCard({ item }: { item: CaseItem }) {
   return (
     <div className="w-full rounded-xl border border-neutral-200 bg-white">
-      <div className="flex aspect-[4/3] items-center justify-center rounded-t-xl bg-neutral-100 text-[12px] font-medium text-neutral-400">
-        시공 사진 (교체 예정)
-      </div>
+      <img
+        src={item.image}
+        alt={`${item.title} ${item.tag} 시공 사진`}
+        width={800}
+        height={600}
+        loading="lazy"
+        className="aspect-[4/3] w-full rounded-t-xl bg-neutral-100 object-cover"
+      />
       <div className="p-4">
         <span className="inline-block rounded-full bg-brand/10 px-2.5 py-1 text-[11px] font-semibold text-brand-dark">
           {item.tag}
@@ -57,7 +84,7 @@ function CaseColumn({
         {[0, 1].map((dup) => (
           <Fragment key={dup}>
             {items.map((item) => (
-              <CaseCard key={`${dup}-${item.title}`} item={item} />
+              <CaseCard key={`${dup}-${item.image}`} item={item} />
             ))}
           </Fragment>
         ))}
@@ -66,9 +93,10 @@ function CaseColumn({
   )
 }
 
-const FIRST_COLUMN = CASES.slice(0, 3)
-const SECOND_COLUMN = CASES.slice(3, 6)
-const THIRD_COLUMN = CASES.slice(6, 9)
+// 1·2·3번이 첫 줄에 나란히 오도록 번갈아 배치 (모바일은 첫 번째 열만 노출)
+const FIRST_COLUMN = CASES.filter((_, i) => i % 3 === 0)
+const SECOND_COLUMN = CASES.filter((_, i) => i % 3 === 1)
+const THIRD_COLUMN = CASES.filter((_, i) => i % 3 === 2)
 
 export function CaseStudies() {
   return (
@@ -84,16 +112,16 @@ export function CaseStudies() {
           </p>
         </div>
 
-        <div className="mt-8 flex max-h-[640px] justify-center gap-4 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
-          <CaseColumn items={FIRST_COLUMN} duration={16} className="w-full max-w-[280px]" />
+        <div className="mt-8 flex max-h-[640px] justify-center gap-4 lg:max-h-[900px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
+          <CaseColumn items={FIRST_COLUMN} duration={60} className="w-full max-w-[280px]" />
           <CaseColumn
             items={SECOND_COLUMN}
-            duration={20}
+            duration={72}
             className="hidden w-full max-w-[280px] sm:block"
           />
           <CaseColumn
             items={THIRD_COLUMN}
-            duration={18}
+            duration={66}
             className="hidden w-full max-w-[280px] lg:block"
           />
         </div>

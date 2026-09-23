@@ -6,6 +6,8 @@
   --color-brand-dark: #1d4ed8;
   --color-ink: #101828;
   --color-paper: #f7f9fc;
+
+  --font-pretendard: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 @layer utilities {

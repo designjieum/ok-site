@@ -50,21 +50,39 @@ export function AdditionalServices() {
           </div>
 
           <div className="grid grid-cols-6 gap-4">
-            <div className="col-span-6 flex h-56 flex-col justify-between rounded-2xl bg-gradient-to-br from-neutral-800 to-neutral-600 p-5 sm:col-span-3 md:h-64">
-              <span className="w-fit rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold text-white">
+            <div className="relative col-span-6 flex h-56 flex-col justify-between overflow-hidden rounded-2xl bg-neutral-800 p-5 sm:col-span-3 md:h-64">
+              <img
+                src="/images/extra-faucet.webp"
+                alt="주방 싱크대 수전"
+                width={1200}
+                height={800}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/10" />
+              <span className="relative w-fit rounded-full bg-black/40 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur-sm">
                 대표 서비스
               </span>
-              <div>
+              <div className="relative">
                 <p className="break-keep text-[18px] font-bold leading-[1.25] text-white">수전 교체</p>
-                <p className="mt-1 break-keep [text-wrap:pretty] text-[13px] leading-[1.3] text-white/70">
+                <p className="mt-1 break-keep [text-wrap:pretty] text-[13px] leading-[1.3] text-white/80">
                   주방·화장실 수전, 방문 즉시 교체
                 </p>
               </div>
             </div>
 
-            <div className="col-span-6 flex h-56 flex-col justify-end rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 p-5 sm:col-span-3 md:h-64">
-              <p className="break-keep text-[18px] font-bold leading-[1.25] text-white">화장실 양변기 교체</p>
-              <p className="mt-1 break-keep [text-wrap:pretty] text-[13px] leading-[1.3] text-white/70">
+            <div className="relative col-span-6 flex h-56 flex-col justify-end overflow-hidden rounded-2xl bg-slate-800 p-5 sm:col-span-3 md:h-64">
+              <img
+                src="/images/extra-toilet.webp"
+                alt="화장실 양변기"
+                width={1200}
+                height={800}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+              <p className="relative break-keep text-[18px] font-bold leading-[1.25] text-white">화장실 양변기 교체</p>
+              <p className="relative mt-1 break-keep [text-wrap:pretty] text-[13px] leading-[1.3] text-white/80">
                 오래된 양변기, 새 제품으로 교체
               </p>
             </div>
