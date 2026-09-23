@@ -106,9 +106,13 @@ export function AdditionalServices() {
                 <HammerIcon />
               </span>
               <div>
-                <p className="text-[14px] font-semibold text-white">디에트르 아파트 빨래장 철거</p>
-                <p className="mt-0.5 break-keep [text-wrap:pretty] text-[12px] leading-[1.3] text-white/60">
-                  철거부터 마감까지 깔끔하게 정리
+                <p className="break-keep text-[18px] font-bold leading-[1.25] text-white sm:text-[14px] sm:font-semibold">
+                  디에트르 아파트{' '}
+                  <br className="hidden sm:block" />
+                  빨래장 철거
+                </p>
+                <p className="mt-1 break-keep [text-wrap:pretty] text-[13px] leading-[1.3] text-white/70 sm:mt-0.5 sm:text-[12px] sm:text-white/60">
+                  철거부터 마감까지
                 </p>
               </div>
             </div>

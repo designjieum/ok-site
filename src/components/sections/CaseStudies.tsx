@@ -40,9 +40,10 @@ const CASES: CaseItem[] = [
   { image: '/images/case-30.webp', tag: '난방 배관', title: '양주·의정부·포천·동두천', result: '기존 배관보다 설치가 간편하고 유지 관리가 용이한 XL 배관 설치' },
 ]
 
-function CaseCard({ item }: { item: CaseItem }) {
+// duplicate: 무한 스크롤용 복제본. 스크린리더·크롤러가 같은 사례를 두 번 읽지 않도록 숨긴다
+function CaseCard({ item, duplicate = false }: { item: CaseItem; duplicate?: boolean }) {
   return (
-    <div className="w-full rounded-xl border border-neutral-200 bg-white">
+    <div aria-hidden={duplicate || undefined} className="w-full rounded-xl border border-neutral-200 bg-white">
       <img
         src={item.image}
         alt={`${item.title} ${item.tag} 시공 사진`}
@@ -84,7 +85,7 @@ function CaseColumn({
         {[0, 1].map((dup) => (
           <Fragment key={dup}>
             {items.map((item) => (
-              <CaseCard key={`${dup}-${item.image}`} item={item} />
+              <CaseCard key={`${dup}-${item.image}`} item={item} duplicate={dup === 1} />
             ))}
           </Fragment>
         ))}

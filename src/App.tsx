@@ -7,7 +7,6 @@ import { Reviews } from './components/sections/Reviews'
 import { FAQ } from './components/sections/FAQ'
 import { CTA } from './components/sections/CTA'
 import { Footer } from './components/sections/Footer'
-import { StickyBar } from './components/ui/StickyBar'
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
         <CTA />
       </main>
       <Footer />
-      <StickyBar />
     </div>
   )
 }

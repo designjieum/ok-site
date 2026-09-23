@@ -12,7 +12,7 @@ const SERVICE_AREAS = ['양주', '포천', '의정부', '동두천']
 
 export function Footer() {
   return (
-    <footer className="bg-ink pb-28 pt-12 text-white md:pb-12 md:pt-14">
+    <footer className="bg-ink pb-12 pt-12 text-white max-[426px]:pb-28 md:pt-14">
       <div className="mx-auto max-w-6xl px-5">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div>
@@ -30,7 +30,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 sm:gap-16">
+          <div className="grid gap-8 sm:grid-cols-[auto_auto] sm:gap-16">
             <div>
               <p className="text-[12px] font-semibold text-white/40">바로가기</p>
               <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 sm:block sm:space-y-2">
@@ -57,7 +57,9 @@ export function Footer() {
                 <span className="font-semibold text-white/80">출장 지역</span> {SERVICE_AREAS.join(' · ')}
               </p>
               <a
-                href="#"
+                href="https://blog.naver.com/ok_homemaster"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3 py-1.5 text-[12px] font-semibold text-white/80 transition-colors hover:border-white/30 hover:text-white"
               >
                 <span className="flex h-4 w-4 items-center justify-center rounded-[4px] bg-[#03C75A] text-[9px] font-extrabold text-white">
