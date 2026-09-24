@@ -17,7 +17,7 @@ const SERVICES: Service[] = [
   {
     tags: ['온수기 설치', '수도계량기 점검'],
     title: '온수기·분배기·수도계량기 설비',
-    description: '온수 안 나오는 그날, 바로 출동해서 원인부터 찾아드립니다.',
+    description: '오래된 온수기, 새 제품 준비부터 설치·배관 연결까지 한 번에 끝내드려요. 직접 사신 제품도 설치해 드려요.',
     image: { src: '/images/service-2.webp', alt: '온수기 배관을 연결하는 모습' },
   },
   {

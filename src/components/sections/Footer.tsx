@@ -52,7 +52,7 @@ export function Footer() {
               >
                 {PHONE}
               </a>
-              <p className="mt-1 whitespace-nowrap text-[13px] text-white/60">상담시간 09:00 - 18:00 (연중무휴)</p>
+              <p className="mt-1 whitespace-nowrap text-[13px] text-white/60">상담시간 07:00 - 22:00 (연중무휴)</p>
               <p className="mt-3 whitespace-nowrap text-[13px] text-white/60">
                 <span className="font-semibold text-white/80">출장 지역</span> {SERVICE_AREAS.join(' · ')}
               </p>
